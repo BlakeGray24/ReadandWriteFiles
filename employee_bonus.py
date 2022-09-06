@@ -1,16 +1,20 @@
+def main():
+    import csv
 
-import csv
+    infile = ('EmployeePay.csv','r')
 
-infile = ('EmployeePay.csv','r')
+    csvfile = csv.reader(infile,delimiter=',')
+    next(csvfile)
 
-csvfile = csv.reader(infile,delimiter=',')
-next(csvfile)
+    #infile.readline()
 
-infile.readline()
+    #infile.readline()
+    #Repeating structure
+    print('ID:')
+    print('Full name:')
+    print('Total salary:')
 
-for record in csvfile:
-    print('ID:',record[0])
-    print('Full name:',record[1]+' '+record[2])
-    print('Total salary:',record[3])
+    input()
 
-input()
+#def cal_total():
+    #Calculate total here, location 4 & 5 in the list
