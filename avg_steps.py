@@ -7,7 +7,7 @@ months = ['Janurary','Feburary','March','April','May','June','July','August','Se
 
 outfile = open('avg_steps.csv','w')
 
-#writer = csv.writer(outfile,delimiter=',',newline='')
+writer = csv.writer(outfile,delimiter=',',newline='')
 
 print('Month | Average steps\n')
 
@@ -27,6 +27,8 @@ for num in range(1,13):
         if str(i) == record[0]:  #I need it to add all the steps and then divide it by the total number of days
             steps = steps + int(record[1])
             days = days + record[0]
+            avg = (steps / days)
+            
     outfile.write()
     infile.close()
 
