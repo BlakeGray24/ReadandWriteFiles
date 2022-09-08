@@ -26,7 +26,7 @@ for num in range(1,13):
         
         if str(i) == record[0]:  #I need it to add all the steps and then divide it by the total number of days
             steps = steps + int(record[1])
-            days = days + record[0]
+            days = days + 1
             avg = (steps / days)
             
     outfile.write()
