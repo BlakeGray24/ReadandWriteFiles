@@ -40,14 +40,14 @@ for num in range(1,13):
             
 
         else:
-            avg = float(steps/days)
+            avg = (steps/days)
 
             print('%.0f'% avg)
 
             avg = str(avg)
 
 
-            outfile.write(months[i] + ',' + avg)
+            outfile.write(months[i] + ', ' + avg)
             
             
             steps = record[i]
