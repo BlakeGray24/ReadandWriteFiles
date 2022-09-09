@@ -10,7 +10,7 @@ outfile = open('avg_steps.csv','w')
 #writer = csv.writer(outfile,delimiter=',',newline='')
 
 print('Month | Average steps\n')
-outfile.write('Month | Average steps\n')
+outfile.write('Month, Average\n')
 
 num=1
 
