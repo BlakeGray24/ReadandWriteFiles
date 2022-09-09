@@ -14,7 +14,7 @@ outfile.write('Month | Average steps\n')
 
 num=1
 
-for num in range(1,13):
+for num in range(1,14):
 
     steps = 0
     avg = 0 
@@ -29,9 +29,9 @@ for num in range(1,13):
 
     for record in csvfile:
         
-        if str(i) == record[0]:  #I need it to add all the steps and then divide it by the total number of days
+        if str(i) == record[0]: #I need it to add all the steps and then divide it by the total number of days
             steps += int(record[1])
-            days  += 1
+            days  += record.count(record[0])
 
             print(steps)
             print(days)
@@ -42,16 +42,23 @@ for num in range(1,13):
         else:
             avg = (steps/days)
 
+            print('#########################')
             print('%.0f'% avg)
+            #print(type(i))
 
             avg = str(avg)
+
 
 
             outfile.write(months[i] + ', ' + avg)
             
             
-            steps = record[i]
-            days = i
+            
+            steps = record[1]
+            days = record[0]
+            i+=1
+
+
 
             #outfile.write(months[i],avg)
             # 
